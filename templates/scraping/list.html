@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Web Scraper
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scraping/css/list_style.css' %}">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/100/000000/mixer-logo.png">
+    
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    <h5> GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY B.TECH RESULTS FOR AFFILIATED INSTITUTES </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/220px-GGSIU_logo.svg.png" alt="">
+    <br>
+    <form action="{% url 'download' %}">
+		Total {{files}} files 
+        <table>
+            <tr>
+                <th>Notice</th>
+                <th>Date</th>
+                <th>Select all &nbsp;&nbsp;<input type="checkbox" id="select_all" onchange="check()"></th>
+            </tr>
+            {% for i,j in list.items %}
+            <tr>
+                {% for k,l in j.items %}
+                <td>{{ i }}</td>
+                <td>{{ l }}</td>
+                <td><input type="checkbox" name="value_checkbox" value={{ k }}></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <center>
+            <input type="submit" value="Download" id="btn">
+        </center>
+        <br><br>
+    </form>
+</body>
+<footer _ngcontent-xew-c48="">
+    <div _ngcontent-xew-c48="" class="mini-footer">
+        <div _ngcontent-xew-c48="" class="container">
+            <div _ngcontent-xew-c48="" class="row">
+                <div _ngcontent-xew-c48="" class="col-md-12">
+                    <p _ngcontent-xew-c48="" class="grey-text text-lighten-4">This portal is an initiative of <a _ngcontent-xew-c48="" href="http://www.bpitindia.com">BPIT DELHI</a> and is currently under Development &amp; Testing. <br _ngcontent-xew-c48=""> REPORT ANY DISCREPANCIES IN RESULTS OR GIVE FEEDBACK/SUGGESTIONS AT <a _ngcontent-xew-c48="" href="">resultapp@bpitindia.com</a></p><div _ngcontent-xew-c48="" class="copyright-text"><p _ngcontent-xew-c48="">© 2020 <a _ngcontent-xew-c48="" href="#">SRCS IPU</a>, All rights reserved. Created by <a _ngcontent-xew-c48="" href="#">BPIT INDIA</a>
+                    </p>
+                </div>
+                <div _ngcontent-xew-c48="" class="go_top">
+                    <span _ngcontent-xew-c48="" class="icon-arrow-up"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+{% load static %}
+<script src="{% static 'scraping/js/list.js' %}" type="text/javascript"></script>
+</html>

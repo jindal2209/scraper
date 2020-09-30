@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Web Scraper
+    </title>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/100/000000/mixer-logo.png">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scraping/css/home_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'scraping/home_style.css' %}">
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    <h5> GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY B.TECH RESULTS FOR AFFILIATED INSTITUTES </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/220px-GGSIU_logo.svg.png" alt="">
+    <br>
+    <form action="{%url 'check'%}">
+        <br><br>
+        <div id="id_1">
+            Enter the link:
+            <input type="text" placeholder="link" name="link" value="http://ggsipu.ac.in/ExamResults/ExamResultsmain.htm">  
+            <br>
+            <br>
+            Enter date range: 
+            <br><br>
+            <input type="date" placeholder="from" name='initial_date'> &nbsp;&nbsp; to &nbsp;&nbsp;<input type="date" placeholder="to" name='final_date'>
+        </div>
+        <br>
+        <input type="submit" value="Check" onclick="func()">
+        <br><br><br>
+    </form>
+</body>
+<footer _ngcontent-xew-c48="">
+    <div _ngcontent-xew-c48="" class="mini-footer">
+        <div _ngcontent-xew-c48="" class="container">
+            <div _ngcontent-xew-c48="" class="row">
+                <div _ngcontent-xew-c48="" class="col-md-12">
+                    <p _ngcontent-xew-c48="" class="grey-text text-lighten-4">This portal is an initiative of <a _ngcontent-xew-c48="" href="http://www.bpitindia.com">BPIT DELHI</a> and is currently under Development &amp; Testing. <br _ngcontent-xew-c48=""> REPORT ANY DISCREPANCIES IN RESULTS OR GIVE FEEDBACK/SUGGESTIONS AT <a _ngcontent-xew-c48="" href="">resultapp@bpitindia.com</a></p><div _ngcontent-xew-c48="" class="copyright-text"><p _ngcontent-xew-c48="">© 2020 <a _ngcontent-xew-c48="" href="#">SRCS IPU</a>, All rights reserved. Created by <a _ngcontent-xew-c48="" href="#">BPIT INDIA</a>
+                    </p>
+                <div _ngcontent-xew-c48="" class="go_top">
+                    <span _ngcontent-xew-c48="" class="icon-arrow-up"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
