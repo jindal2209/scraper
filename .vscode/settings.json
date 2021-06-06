@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "D:\\Shubham\\Shubham\\scraping_final\\Scripts" ,
+	"python.pythonPath": "D:\\Shubham\\Shubham\\BPIT\\Results\\env\\Scripts",
+	"python.linting.pylintEnabled": true,
+	"python.linting.flake8Enabled": false,
+	"python.linting.enabled": true,
+	"python.terminal.activateEnvironment": true,
 }

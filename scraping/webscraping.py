@@ -22,7 +22,7 @@ def scraping(link,d1,d2):
 
     for a in soup.find_all('a',href=True) :
         if 'b.tech' in urllib.parse.unquote(a['href']).lower() or 'btech' in urllib.parse.unquote(a['href']).lower() and datef(urllib.parse.unquote(a['href'])[5:11]) in date_list :
-            print(a)
+            # print(a)
             notice_date[urllib.parse.unquote(a['href']).split('/')[-1]] = {'http://ggsipu.ac.in/ExamResults/'+ a['href'] : datef(urllib.parse.unquote(a['href'])[5:11])}
 
     return notice_date
